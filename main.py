@@ -108,7 +108,7 @@ def send_line_notify():
 
 # Check response status code
 if response.status_code == 200:
-    print("填寫成功：", response.status_code)
+    print(f"[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 填寫成功：", response.status_code)
     send_line_notify()
 else:
-    print("發生錯誤，錯誤代碼：", response.status_code)
+    print(f"[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 發生錯誤，錯誤代碼：", response.status_code)
